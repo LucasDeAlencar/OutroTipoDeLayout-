@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Representara cada registro do fragment_listar_clientes -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtItemLista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ID, Nome do Cliente"
+        android:layout_margin="16dp"
+        android:textColor="#148F84"/>
+    </ScrollView>
+</androidx.appcompat.widget.LinearLayoutCompat>

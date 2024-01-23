@@ -6,6 +6,7 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import app.modelo.meusclientes.api.AppUtil;
@@ -66,4 +67,19 @@ public class ClienteController extends AppDataBase implements iCrud<Cliente>{
         return getAllClientes(ClienteDataModel.TABELA);
 
     }
+
+    public List<String> gerarListaDeClientesListView(){
+
+        List<String> clientes = new ArrayList<>();
+
+        for (Cliente obj : listar()){
+
+            clientes.add(obj.getId()+", " + obj.getNome());
+
+        }
+        return clientes;
+    }
+
+
+
 }

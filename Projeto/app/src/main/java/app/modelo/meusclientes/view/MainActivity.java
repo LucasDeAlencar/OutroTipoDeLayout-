@@ -165,6 +165,9 @@ public class MainActivity extends AppCompatActivity
 
             /* Comando para troca de tela */
             fragmentManager.beginTransaction().replace(R.id.content_fragment, new AficionarClienteFragment()).commit();
+        } else if (id == R.id.nav_Listar_cliente) {
+            fragmentManager.beginTransaction().replace(R.id.content_fragment, new ListarClientesFragment()).commit();
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
