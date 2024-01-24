@@ -12,7 +12,6 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
@@ -25,7 +24,7 @@ import app.modelo.meusclientes.controller.ClienteController;
 import app.modelo.meusclientes.model.Cliente;
 
 
-public class ListarClientesFragment extends Fragment {
+public class ListarClientesCardsFragment extends Fragment {
 
     View view;
 
@@ -45,7 +44,7 @@ public class ListarClientesFragment extends Fragment {
 
     Cliente objCliente;
 
-    public ListarClientesFragment() {
+    public ListarClientesCardsFragment() {
     }
 
 
@@ -59,11 +58,11 @@ public class ListarClientesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        view =  inflater.inflate(R.layout.fragment_listar_clientes, container, false);
+        view =  inflater.inflate(R.layout.fragment_listar_clientes_cards, container, false);
 
         TextView txtTitulo = view.findViewById(R.id.txtTitulo);
 
-        txtTitulo.setText("Lista De Clientes");
+        txtTitulo.setText("Listar Clientes (Cards)");
 
         txtTitulo.setTextColor(ColorStateList.valueOf(Color.RED));
 
@@ -86,7 +85,7 @@ public class ListarClientesFragment extends Fragment {
             @Override
             public void beforeTextChanged(CharSequence filtro, int i, int i1, int i2) {
 
-                ListarClientesFragment.this.clienteAdapter.getFilter().filter(filtro);
+                ListarClientesCardsFragment.this.clienteAdapter.getFilter().filter(filtro);
 
             }
             @Override

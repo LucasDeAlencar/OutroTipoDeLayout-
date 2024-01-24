@@ -74,7 +74,7 @@ public class ClienteController extends AppDataBase implements iCrud<Cliente>{
 
         for (Cliente obj : listar()){
 
-            clientes.add(obj.getId()+", " + obj.getNome());
+            clientes.add(obj.getId()+", " + obj.getNome()+ ", "+ obj.getTelefone());
 
         }
         return clientes;

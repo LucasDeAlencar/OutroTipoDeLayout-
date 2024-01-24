@@ -66,6 +66,7 @@ public class AficionarClienteFragment extends Fragment {
 
         iniciarComponentesDeLayout();
 
+        btnSalvar.setEnabled(false);
         escutarEventoDosBotoes();
         
         return view;
@@ -130,6 +131,20 @@ public class AficionarClienteFragment extends Fragment {
 
     private void escutarEventoDosBotoes() {
 
+
+        chkTermosdeUso.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (chkTermosdeUso.isChecked()){
+                    btnSalvar.setEnabled(true);
+                }else {
+                    btnSalvar.setEnabled(false);
+                }
+
+            }
+        });
+
         btnCancelar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -163,6 +178,17 @@ public class AficionarClienteFragment extends Fragment {
                     novoCliente.setTermosDeUso(chkTermosdeUso.isChecked());
 
                     clienteController.incluir(novoCliente);
+
+                    edtNomeCompleto.setText(null);
+                    edtTelefone.setText(null);
+                    edtEmail.setText(null);
+                    edtCep.setText(null);
+                    edtLogradouro.setText(null);
+                    edtNumero.setText(null);
+                    edtBairro.setText(null);
+                    edtCidade.setText(null);
+                    edtEstado.setText(null);
+
 
                 }else {
 

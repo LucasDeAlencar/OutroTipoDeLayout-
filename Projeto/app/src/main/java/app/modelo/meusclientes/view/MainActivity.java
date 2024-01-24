@@ -21,6 +21,8 @@ import com.google.android.material.snackbar.Snackbar;
 import app.modelo.meusclientes.R;
 import app.modelo.meusclientes.controller.ClienteController;
 
+// TODO - Criar o novo Layout para suporte aos CARDS
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener/* INJETA O MENU */ {
 
@@ -168,6 +170,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_Listar_cliente) {
             fragmentManager.beginTransaction().replace(R.id.content_fragment, new ListarClientesFragment()).commit();
 
+        }else if (id == R.id.nav_Listar_cliente_cards){
+            fragmentManager.beginTransaction().replace(R.id.content_fragment, new ListarClientesCardsFragment()).commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

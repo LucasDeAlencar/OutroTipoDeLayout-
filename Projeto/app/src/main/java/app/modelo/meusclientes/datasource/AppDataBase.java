@@ -108,7 +108,7 @@ public class AppDataBase extends SQLiteOpenHelper {
                 obj = new Cliente();
                 obj.setId(cursor.getInt(0)/*Retorna uma coluna do tipo "int" em determinado index */);
                 obj.setNome(cursor.getString(1)/**/);
-                obj.setEmail(cursor.getString(2));
+                obj.setTelefone(cursor.getString(2));
 
                 clientes.add(obj);
 

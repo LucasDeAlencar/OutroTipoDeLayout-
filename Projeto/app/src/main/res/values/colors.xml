@@ -6,4 +6,9 @@
 
     <color name="preto">#000000</color>
     <color name="campos">#0090FF</color>
+
+    <!-- Cores do cards -->
+
+    <color name="beje">#FAF7F5</color>
+
 </resources>
