@@ -10,4 +10,6 @@
 
     <!-- Textos para o Layout Adicionar Novo Cliente -->
     <string name="novoCliente">Adicionar Novo Cliente</string>
+    <string name="txtPerfilContato">Perfil e contato</string>
+    <string name="txtEndereco">Endereço</string>
 </resources>

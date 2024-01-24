@@ -172,6 +172,9 @@ public class MainActivity extends AppCompatActivity
 
         }else if (id == R.id.nav_Listar_cliente_cards){
             fragmentManager.beginTransaction().replace(R.id.content_fragment, new ListarClientesCardsFragment()).commit();
+        }else if (id == R.id.nav_adicionar_cliente_cards){
+            setTitle("Novo Cliente (Cards)");
+            fragmentManager.beginTransaction().replace(R.id.content_fragment, new AficionarClienteCardsFragment()).commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
